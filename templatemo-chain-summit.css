@@ -7,6 +7,10 @@ https://templatemo.com/tm-601-chain-summit
 
 */
 
+/*
+ Modified for HERCULES Project
+*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -1639,4 +1643,24 @@ footer p a:hover {
 	.sponsor-description {
 		font-size: 0.8rem;
 	}
+}
+
+
+/* --- CORRECCIÓN DE MÁRGENES (Padding) --- */
+
+/* Añadimos 10% de espacio a los lados para pantallas grandes */
+.about, 
+.speakers, 
+.schedule {
+    padding: 100px 10% !important; /* 100px vertical, 10% horizontal */
+    width: 100%;
+}
+
+/* Ajuste para móviles: reducimos el espacio lateral para no perder visibilidad */
+@media (max-width: 768px) {
+    .about, 
+    .speakers, 
+    .schedule {
+        padding: 60px 20px !important; /* 60px vertical, 20px horizontal */
+    }
 }
