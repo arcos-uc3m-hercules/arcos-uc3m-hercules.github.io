@@ -61,6 +61,99 @@ https://templatemo.com/tm-601-chain-summit
 
     <section id="about" class="about">
         <div class="section-title">
+            <h2>HERCULES in-memory file system</h2>
+            <div class="title-underline"></div>
+        </div>
+        <!-- <div class="">
+            <p> HERCULES is an in-memory distributed file system designed to bridge the performance gap between compute
+                capabilities and storage speed in modern clusters. Unlike traditional parallel file systems (PFS),
+                HERCULES is deployed on-demand ("ad-hoc") over compute nodes, leveraging main memory and NVMe devices to
+                deliver massive bandwidth and minimal latency. It is the ideal solution for scientific applications
+                requiring high-performance temporary I/O (Burst Buffer). </p>
+        </div> -->
+
+        <div class="intro">
+            <!-- <h2>Introduction</h2> -->
+            <p> <strong>HERCULES</strong> is an advanced  <strong>scalable and elastic ad-hoc file system (AHFS)</strong>
+                specifically engineered for modern large-scale, data-intensive computing in  <strong>High-Performance
+                    Computing
+                    (HPC)</strong> and  <strong>Artificial Intelligence (AI)</strong> environments.</p>
+            <p>Designed to alleviate the strain on traditional HPC storage systems, HERCULES operates as a high-speed,
+                 <strong>distributed, temporary file system</strong> . It dynamically utilizes local storage resources
+                available on compute nodes, such as  <strong>main memory</strong> and optional  <strong>NVMe</strong> ,
+                allowing it to adapt its
+                capacity and performance to the real-time I/O demands of applications. Its architecture is optimized to
+                support contemporary workloads, including cutting-edge machine learning frameworks like Horovod and
+                TensorFlow.
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>Main Characteristics</h2>
+
+        <h3>🚀 High Performance & Communication</h3>
+        <ul>
+            <li> <strong>Fast Storage Layer:</strong> Uses  <strong>main memory</strong> (DRAM) and optionally
+                 <strong>NVMe</strong> to establish a
+                high-performance, temporary storage layer.</li>
+            <li> <strong>UCX Integration:</strong> Features deep integration with the  <strong>Unified Communication X
+                    (UCX)</strong>
+                    framework, ensuring network portability and extremely high-performance communication.</li>
+            <li> <strong>Low-Latency Data Transfer:</strong> Exploits  <strong>RDMA-capable protocols</strong>
+                (InfiniBand, Omni-Path,
+                shared-memory) to facilitate  <strong>low-latency, zero-copy data transfers</strong> and superior
+                scalability.</li>
+            <li> <strong>Demonstrated Speed:</strong> Achieves significant performance gains, demonstrating <strong>up to
+                    2–3x
+                    throughput improvements</strong> for read/write operations compared to established HPC file systems
+                like BeeGFS
+                and Lustre.</li>
+        </ul>
+
+        <hr>
+
+        <h3>🔄 Elasticity and Adaptability</h3>
+        <ul>
+            <li> <strong>Runtime Elasticity:</strong> Implements a novel mechanism to apply storage <strong>elasticity at
+                    runtime</strong>. This allows HERCULES storage services (data storage servers) to be dynamically modified
+                    to
+                    adjust capacity based on an application's changing I/O needs.</li>
+            <li> <strong>Transparent Data Migration:</strong> Supports the transparent <strong>migration of data</strong>
+                to
+                efficiently utilize and redistribute available resources across the cluster.</li>
+            <li> <strong>Data Distribution Policies:</strong> Exposes <strong>dataset-level data distribution
+                    policies</strong> to
+                applications, enabling better exploitation of data locality and optimized response to specific workload
+                demands.</li>
+        </ul>
+
+        <hr>
+
+        <h3>⚙️ Architecture & Fault Tolerance</h3>
+        <ul>
+            <li> <strong>Distributed Architecture:</strong> Built on a classic <strong>client-server design model</strong>
+                with
+                distinct, distributed data and metadata servers for maximized throughput.</li>
+            <li> <strong>Compliance:</strong> It is a <strong>POSIX-compliant</strong> ad-hoc file system, ensuring
+                compatibility with
+                most standard HPC applications.</li>
+            <li> <strong>Decentralized Metadata:</strong> Utilizes an <strong>enhanced, two-tier metadata
+                    structure</strong> that is
+                distributed across nodes, significantly improving the handling of small files and overall scalability.
+            </li>
+            <li> <strong>Resilience:</strong> Achieves fault tolerance through sophisticated <strong>replication
+                    management</strong>
+                    techniques and employs a relaxed consistency model (<strong>commit consistency</strong>) to efficiently support
+                    high-throughput operations with minimal overhead.</li>
+        </ul>
+
+    </section>
+
+
+
+    <section id="about" class="about">
+        <div class="section-title">
             <h2>System Design</h2>
             <div class="title-underline"></div>
         </div>
@@ -93,11 +186,11 @@ https://templatemo.com/tm-601-chain-summit
             </div>
         </div>
         <div class="figure-container">
-                <figure>
-                    <img src="assets/hercules_ucx.webp" alt="HERCULES architecture" style="width:70%">
-                    <!-- <figcaption>HERCULES architecture</figcaption> -->
-                </figure>
-            </div>
+            <figure>
+                <img src="assets/hercules_ucx.webp" alt="HERCULES architecture" style="width:70%">
+                <!-- <figcaption>HERCULES architecture</figcaption> -->
+            </figure>
+        </div>
     </section>
 
     <section id="architecture" class="speakers">
@@ -132,6 +225,8 @@ https://templatemo.com/tm-601-chain-summit
         </div>
 
     </section>
+
+    
 
     <!-- <section id="configuration" class="schedule">
         <div class="section-title">
@@ -192,9 +287,9 @@ https://templatemo.com/tm-601-chain-summit
         <div class="footer-content">
             <h2>HERCULES Project</h2>
             <p>Developed by ARCOS Group at University Carlos III de Madrid</p>
-            <div class="social-links">
+            <!-- <div class="social-links">
                 <a href="https://github.com/arcos-uc3m-hercules" class="social-link" target="_blank">GitHub</a>
-            </div>
+            </div> -->
             <p>
                 © 2025 HERCULES. Open Source Project.
             </p>

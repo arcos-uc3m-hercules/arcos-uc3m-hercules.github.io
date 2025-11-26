@@ -138,7 +138,7 @@ function toggleMenu() {
 
 // Initialize everything when page loads
 window.addEventListener('load', () => {
-//    animateCounters();
+   animateCounters();
 //    createNeuralNetwork();
 //    createParticles();
    // updateCountdown(); // Eliminado ya que no es un evento con fecha
