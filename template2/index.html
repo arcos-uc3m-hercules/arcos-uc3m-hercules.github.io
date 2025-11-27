@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
 
-  <title>Chain App Dev - App Landing Page HTML5 Template</title>
+  <title>HERCULES</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -106,6 +106,10 @@ https://templatemo.com/tm-570-chain-app-dev
                       <a href="https://github.com/arcos-uc3m-hercules/hercules" target="_blank">GitHub Repo <i
                           class="fab fa-github"></i></a>
                     </div>
+                    <div class="white-button scroll-to-section">
+                      <a href="https://scholar.google.com/citations?user=89aVrHIAAAAJ&hl=es&oi=sra" target="_blank">Read
+                        our last articles<i class="far fa-file-alt"></i></a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -141,7 +145,8 @@ https://templatemo.com/tm-570-chain-app-dev
             <div class="icon"></div>
             <h4>High Performance</h4>
             <p>Uses main memory (DRAM) and optionally NVMe to establish a high-performance, temporary storage layer with
-              UCX integration.</p>
+              <b>UCX integration</b>.
+            </p>
           </div>
         </div>
         <div class="col-lg-3">
@@ -207,13 +212,13 @@ https://templatemo.com/tm-570-chain-app-dev
                 <p>Two-tier metadata structure distributed across nodes.</p>
               </div>
             </div>
-            <div class="col-lg-12">
+            <!-- <div class="col-lg-12">
               <p>Unlike traditional parallel file systems (PFS), HERCULES is deployed on-demand ("ad-hoc") over compute
                 nodes.</p>
               <div class="gradient-button">
                 <a href="https://github.com/arcos-uc3m-hercules/hercules" target="_blank">Visit GitHub</a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-lg-6">
@@ -238,25 +243,26 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-pro">
-            <span class="price">Frontend</span>
+            <!-- <span class="price">Frontend</span> -->
             <!-- <h4>Client-side</h4> -->
             <div class="icon">
+              <h4>Shared Library</h4>
               <img src="assets/images/hercules/frontend-bash.webp" alt="frontend bash icon">
             </div>
             <ul>
-              <li><strong>Front-end</strong></li>
+              <li><strong>Frontend</strong></li>
               <li>Create Dataset Operations</li>
               <li>Data Deployment Handling</li>
-              <li>Communicates with the backend</li>
+              <!-- <li>Communicates with the backend</li> -->
             </ul>
-            <div class="border-button">
+            <!-- <div class="border-button">
               <a href="#">Read Docs</a>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-pro">
-            <span class="price">Backend</span>
+            <!-- <span class="price">Backend</span> -->
             <h4>Metadata Server</h4>
             <div class="icon">
               <img src="assets/images/hercules/metadata.webp" alt="">
@@ -267,27 +273,27 @@ https://templatemo.com/tm-570-chain-app-dev
               <li>Distributed Structure</li>
               <!-- <li>Default Port: 7500</li> -->
             </ul>
-            <div class="border-button">
+            <!-- <div class="border-button">
               <a href="#">Read Docs</a>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-pro">
-            <span class="price">Backend</span>
+            <!-- <span class="price">Backend</span> -->
             <h4>Data Server</h4>
             <div class="icon">
               <img src="assets/images/hercules/dataserver.webp" alt="">
             </div>
             <ul>
-              <li><strong>Back-end Storage</strong></li>
+              <li><strong>Backend Storage</strong></li>
               <li>Manages Raw Data Storage</li>
               <li>Dispatcher & Worker Threads</li>
               <!-- <li>Default Port: 8500</li> -->
             </ul>
-            <div class="border-button">
+            <!-- <div class="border-button">
               <a href="#">Read Docs</a>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -297,102 +303,105 @@ https://templatemo.com/tm-570-chain-app-dev
   <div id="installation" class="section">
     <div class="container">
       <!-- <div class="row"> -->
-        <div class="align-self-center">
-          <div class="section-heading">
-            <h4>Download &amp; <em>Installation</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>HERCULES is a CMake-based project. You can build it from source or use Spack package manager.</p>
-          </div>
+      <div class="align-self-center">
+        <div class="section-heading">
+          <h4>Download &amp; <em>Installation</em></h4>
+          <img src="assets/images/heading-line-dec.png" alt="">
+          <p>HERCULES is a CMake-based project. You can build it from source or use Spack package manager.</p>
+        </div>
 
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="box-item">
-                <h4><i class="fa fa-list-ul"></i> Prerequisites</h4>
-                <p>Ensure you have the following packages installed before compilation:</p>
-                <ul style="list-style-type: disc; margin-left: 20px; color: #7a7a7a;">
-                  <li>CMake &amp; UCX</li>
-                  <li>Glib &amp; tcmalloc</li>
-                  <li>FUSE</li>
-                  <li>MPI (MPICH or OpenMPI)</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <p>After compilation, the project generates key binaries like <code>mount.imss</code>,
-                <code>libhercules_posix.so</code> (for I/O interception), and <code>imfssfs</code>.</p>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="box-item">
+              <h5><i class="fa fa-list-ul"></i> Prerequisites</h5>
+              <p>Ensure you have the following packages installed before compilation:</p>
+              <ul style="list-style-type: disc; margin-left: 20px; color: #7a7a7a;">
+                <li>CMake >= 3.5</li>
+                <li>UCX >= 1.15</li>
+                <li>Glib</li>
+                <li>MPI (MPICH or OpenMPI)</li>
+              </ul>
             </div>
           </div>
         </div>
+      </div>
 
-          <div class="naccs">
-            <div class="grid">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="menu">
-                    <div class="first-thumb active">
-                      <div class="thumb">
-                        <span class="icon"><i class="fa fa-terminal"></i></span>
-                        CMake Build
-                      </div>
-                    </div>
-                    <div>
-                      <div class="thumb">
-                        <span class="icon"><i class="fa fa-cube"></i></span>
-                        Spack Module
-                      </div>
-                    </div>
+      <div class="naccs">
+        <div class="grid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="menu">
+                <!-- <div class="first-thumb active">
+                  <div class="thumb">
+                    <span class="icon"><i class="fa fa-terminal"></i></span>
+                    CMake Build
                   </div>
                 </div>
-                <div class="col-lg-12">
-                  <ul class="nacc">
-                    <li class="active">
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <div class="client-content">
-                                <h4>Standard Compilation</h4>
-                                <p>Clone the repo and run the following commands:</p>
-                                <pre
-                                  style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em;">
+                <div>
+                  <div class="thumb">
+                    <span class="icon"><i class="fa fa-cube"></i></span>
+                    Spack Module
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <ul class="nacc">
+                <li class="active">
+                  <div>
+                    <div class="thumb">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="client-content">
+                            <!-- TODO: add copy-paste button. -->
+                            <h5><i class="fa fa-terminal"></i>Method 1: Standard Installation</h5>
+                            <p>Clone the repo and run the following commands:</p>
+                            <pre
+                              style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em;">
+git clone https://github.com/arcos-uc3m-hercules/hercules.git
 mkdir build
 cd build
 cmake ..
 make
 make install</pre>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <div class="client-content">
-                                <h4>Spack Installation</h4>
-                                <p>Add the repository under the admire namespace and install:</p>
-                                <pre
-                                  style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em;">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <div class="thumb">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="client-content">
+                            <h5><i class="fa fa-cube">Method 2: Spack Installation</i></h5>
+                            <p>Add the repository under the admire namespace and install:</p>
+                            <pre
+                              style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em;">
 git clone https://gitlab.arcos.inf.uc3m.es/admire/spack.git
 cd hercules
 spack repo add spack
 spack install hercules
 spack load hercules</pre>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
+          <div class="col-lg-12">
+            <p>After compilation, the project generates key binaries like
+              <code>libhercules_posix.so</code> (for I/O interception), and <code>hercules_server</code>.
+            </p>
+          </div>
+        </div>
       </div>
+    </div>
     <!-- </div> -->
   </div>
 
@@ -404,7 +413,8 @@ spack load hercules</pre>
             <h4>How to <em>Run &amp; Use</em> HERCULES</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
             <p>Hercules enables access via API library or <code>LD_PRELOAD</code>.</p>
-            <p>We provide scripts to launch deployments easily based from a configuration file <a href="#configuration">(see below)</a>.</p>
+            <p>We provide scripts to launch deployments easily based from a configuration file <a
+                href="#configuration">(see below)</a>.</p>
           </div>
         </div>
 
@@ -415,15 +425,16 @@ spack load hercules</pre>
             <div class="icon">
               <i class="fa fa-server" style="font-size: 40px; color: #4b8ef1;"></i>
             </div>
-            <p>Use the script "scripts/hercules". It reads initialization parameters from <code>hercules.conf</code>.</p>
+            <p>Use the script "scripts/hercules". It reads initialization parameters from <code>hercules.conf</code>.
+            </p>
             <br>
             <div style="text-align: left; background: #f4f4f4; padding: 10px; border-radius: 5px;">
               <code>hercules start -f &lt;CONF_PATH&gt;</code>
             </div>
             <br>
             <ul>
-              <li>Intercept calls: <code>export LD_PRELOAD=libhercules_posix.so</code></li>
-              <li>Stop deployment: <code>hercules stop</code></li>
+              <li>Intercept calls: <code>export LD_PRELOAD=build/tools/libhercules_posix.so</code></li>
+              <li>Stop deployment: <code>scripts/hercules stop -f <configuration_file_path></code></li>
             </ul>
             <div class="border-button">
               <a href="#">View Scripts</a>
