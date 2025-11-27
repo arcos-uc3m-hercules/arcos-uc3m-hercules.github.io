@@ -65,8 +65,14 @@ https://templatemo.com/tm-570-chain-app-dev
               <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
               <li class="scroll-to-section"><a href="#characteristics">Characteristics</a></li>
               <li class="scroll-to-section"><a href="#design">Design</a></li>
-              <li class="scroll-to-section"><a href="#components">Components</a></li>
-              <li><div class="gradient-button"><a href="https://github.com/arcos-uc3m-hercules" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a></div></li> 
+              <!-- <li class="scroll-to-section"><a href="#components">Components</a></li> -->
+              <li class="scroll-to-section"><a href="#installation">Installation</a></li>
+              <li class="scroll-to-section"><a href="#usage">How to use</a></li>
+              <li class="scroll-to-section"><a href="#todo">FAQs</a></li>
+              <li>
+                <div class="gradient-button"><a href="https://github.com/arcos-uc3m-hercules/hercules"
+                    target="_blank"><i class="fab fa-github"></i> GitHub Repo</a></div>
+              </li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -97,7 +103,7 @@ https://templatemo.com/tm-570-chain-app-dev
                       <a href="#design">View Design <i class="fa fa-layer-group"></i></a>
                     </div>
                     <div class="white-button scroll-to-section">
-                      <a href="https://github.com/arcos-uc3m-hercules" target="_blank">GitHub Repo <i
+                      <a href="https://github.com/arcos-uc3m-hercules/hercules" target="_blank">GitHub Repo <i
                           class="fab fa-github"></i></a>
                     </div>
                   </div>
@@ -131,7 +137,7 @@ https://templatemo.com/tm-570-chain-app-dev
     <div class="container">
       <div class="row">
         <div class="col-lg-3">
-          <div class="service-item first-service">
+          <div class="service-item second-service">
             <div class="icon"></div>
             <h4>High Performance</h4>
             <p>Uses main memory (DRAM) and optionally NVMe to establish a high-performance, temporary storage layer with
@@ -139,7 +145,7 @@ https://templatemo.com/tm-570-chain-app-dev
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="service-item second-service">
+          <div class="service-item first-service">
             <div class="icon"></div>
             <h4>Elasticity</h4>
             <p>Implements runtime elasticity, allowing storage services to dynamically adjust capacity based on
@@ -205,7 +211,7 @@ https://templatemo.com/tm-570-chain-app-dev
               <p>Unlike traditional parallel file systems (PFS), HERCULES is deployed on-demand ("ad-hoc") over compute
                 nodes.</p>
               <div class="gradient-button">
-                <a href="https://github.com/arcos-uc3m-hercules" target="_blank">Visit GitHub</a>
+                <a href="https://github.com/arcos-uc3m-hercules/hercules" target="_blank">Visit GitHub</a>
               </div>
             </div>
           </div>
@@ -231,17 +237,17 @@ https://templatemo.com/tm-570-chain-app-dev
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <span class="price">FE</span>
-            <h4>Client-side</h4>
+          <div class="pricing-item-pro">
+            <span class="price">Frontend</span>
+            <!-- <h4>Client-side</h4> -->
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
+              <img src="assets/images/hercules/frontend-bash.webp" alt="frontend bash icon">
             </div>
             <ul>
               <li><strong>Front-end</strong></li>
               <li>Create Dataset Operations</li>
               <li>Data Deployment Handling</li>
-              <li>Communicates with Metadata Server</li>
+              <li>Communicates with the backend</li>
             </ul>
             <div class="border-button">
               <a href="#">Read Docs</a>
@@ -250,16 +256,16 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
         <div class="col-lg-4">
           <div class="pricing-item-pro">
-            <span class="price">MD</span>
+            <span class="price">Backend</span>
             <h4>Metadata Server</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
+              <img src="assets/images/hercules/metadata.webp" alt="">
             </div>
             <ul>
               <li><strong>Orchestration</strong></li>
               <li>Handles Metadata Operations</li>
               <li>Distributed Structure</li>
-              <li>Default Port: 7500</li>
+              <!-- <li>Default Port: 7500</li> -->
             </ul>
             <div class="border-button">
               <a href="#">Read Docs</a>
@@ -267,22 +273,253 @@ https://templatemo.com/tm-570-chain-app-dev
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <span class="price">DT</span>
+          <div class="pricing-item-pro">
+            <span class="price">Backend</span>
             <h4>Data Server</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="">
+              <img src="assets/images/hercules/dataserver.webp" alt="">
             </div>
             <ul>
               <li><strong>Back-end Storage</strong></li>
               <li>Manages Raw Data Storage</li>
               <li>Dispatcher & Worker Threads</li>
-              <li>Default Port: 8500</li>
+              <!-- <li>Default Port: 8500</li> -->
             </ul>
             <div class="border-button">
               <a href="#">Read Docs</a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="installation" class="section">
+    <div class="container">
+      <!-- <div class="row"> -->
+        <div class="align-self-center">
+          <div class="section-heading">
+            <h4>Download &amp; <em>Installation</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>HERCULES is a CMake-based project. You can build it from source or use Spack package manager.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="box-item">
+                <h4><i class="fa fa-list-ul"></i> Prerequisites</h4>
+                <p>Ensure you have the following packages installed before compilation:</p>
+                <ul style="list-style-type: disc; margin-left: 20px; color: #7a7a7a;">
+                  <li>CMake &amp; UCX</li>
+                  <li>Glib &amp; tcmalloc</li>
+                  <li>FUSE</li>
+                  <li>MPI (MPICH or OpenMPI)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <p>After compilation, the project generates key binaries like <code>mount.imss</code>,
+                <code>libhercules_posix.so</code> (for I/O interception), and <code>imfssfs</code>.</p>
+            </div>
+          </div>
+        </div>
+
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <span class="icon"><i class="fa fa-terminal"></i></span>
+                        CMake Build
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">
+                        <span class="icon"><i class="fa fa-cube"></i></span>
+                        Spack Module
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <h4>Standard Compilation</h4>
+                                <p>Clone the repo and run the following commands:</p>
+                                <pre
+                                  style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em;">
+mkdir build
+cd build
+cmake ..
+make
+make install</pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="thumb">
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="client-content">
+                                <h4>Spack Installation</h4>
+                                <p>Add the repository under the admire namespace and install:</p>
+                                <pre
+                                  style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em;">
+git clone https://gitlab.arcos.inf.uc3m.es/admire/spack.git
+cd hercules
+spack repo add spack
+spack install hercules
+spack load hercules</pre>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    <!-- </div> -->
+  </div>
+
+  <div id="usage" class="pricing-tables">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading">
+            <h4>How to <em>Run &amp; Use</em> HERCULES</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Hercules enables access via API library or <code>LD_PRELOAD</code>.</p>
+            <p>We provide scripts to launch deployments easily based from a configuration file <a href="#configuration">(see below)</a>.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="pricing-item-pro">
+            <span class="price">Slurm</span>
+            <h4>With Slurm (recommended)</h4>
+            <div class="icon">
+              <i class="fa fa-server" style="font-size: 40px; color: #4b8ef1;"></i>
+            </div>
+            <p>Use the script "scripts/hercules". It reads initialization parameters from <code>hercules.conf</code>.</p>
+            <br>
+            <div style="text-align: left; background: #f4f4f4; padding: 10px; border-radius: 5px;">
+              <code>hercules start -f &lt;CONF_PATH&gt;</code>
+            </div>
+            <br>
+            <ul>
+              <li>Intercept calls: <code>export LD_PRELOAD=libhercules_posix.so</code></li>
+              <li>Stop deployment: <code>hercules stop</code></li>
+            </ul>
+            <div class="border-button">
+              <a href="#">View Scripts</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="pricing-item-regular">
+            <span class="price">Manual</span>
+            <h4>Without Slurm</h4>
+            <div class="icon">
+              <i class="fa fa-laptop-code" style="font-size: 40px; color: #fff;"></i>
+            </div>
+            <p>Requires specifying hostfiles for metadata and data servers manually.</p>
+            <br>
+            <div style="text-align: left; background: #fff; color:#333; padding: 10px; border-radius: 5px;">
+              <code>hercules start -m &lt;meta_host&gt; -d &lt;data_host&gt; -f &lt;CONF&gt;</code>
+            </div>
+            <br>
+            <ul>
+              <li><strong>meta_server_hostfile:</strong> Hostnames of metadata servers</li>
+              <li><strong>data_server_hostfile:</strong> Hostnames of data servers</li>
+            </ul>
+            <div class="border-button">
+              <a href="#">View Hostfile Example</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="configuration" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading text-center">
+            <h4>Configuration <em>Parameters</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Key fields for the <code>hercules.conf</code> file.</p>
+          </div>
+        </div>
+        <div class="col-lg-10 offset-lg-1">
+          <table class="table table-striped table-hover"
+            style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0px 0px 15px rgba(0,0,0,0.1);">
+            <thead style="background: #4b8ef1; color: white;">
+              <tr>
+                <th scope="col">Parameter</th>
+                <th scope="col">Description</th>
+                <th scope="col">Default / Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>MOUNT_POINT</code></td>
+                <td>Mount point used in the client side</td>
+                <td>/mnt/hercules/</td>
+              </tr>
+              <tr>
+                <td><code>BLOCK_SIZE</code></td>
+                <td>Block size in KB</td>
+                <td>512</td>
+              </tr>
+              <tr>
+                <td><code>METADATA_PORT</code></td>
+                <td>Port listening in the metadata node service</td>
+                <td>7500</td>
+              </tr>
+              <tr>
+                <td><code>DATA_PORT</code></td>
+                <td>Port listening in the data node service</td>
+                <td>8500</td>
+              </tr>
+              <tr>
+                <td><code>REPL_FACTOR</code></td>
+                <td>Replication factor for fault tolerance</td>
+                <td>1, 2, or 3</td>
+              </tr>
+              <tr>
+                <td><code>POLICY</code></td>
+                <td>Data distribution policy</td>
+                <td>RR, BUCKETS, HASH, LOCAL</td>
+              </tr>
+              <tr>
+                <td><code>STORAGE_SIZE</code></td>
+                <td>Max size in GB used by data nodes (0 = No limit)</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td><code>MALLEABILITY</code></td>
+                <td>Enables malleability functions (1 = On)</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -294,7 +531,7 @@ https://templatemo.com/tm-570-chain-app-dev
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
             <h4>HERCULES Project</h4>
-            <p>Developed by ARCOS Group at University Carlos III de Madrid</p>
+            <b>Developed by ARCOS Group at University Carlos III de Madrid (UC3M)</b>
           </div>
         </div>
       </div>
@@ -304,6 +541,7 @@ https://templatemo.com/tm-570-chain-app-dev
             <h4>Contact & Location</h4>
             <p>University Carlos III de Madrid</p>
             <p>ARCOS Group</p>
+            <p>Pending...</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -311,8 +549,10 @@ https://templatemo.com/tm-570-chain-app-dev
             <h4>Links</h4>
             <ul>
               <li><a href="#top">Home</a></li>
-              <li><a href="#characteristics">Characteristics</a></li>
-              <li><a href="#design">Architecture</a></li>
+              <li><a href="https://www.uc3m.es/research-groups/arcos">About ARCOS Group (UC3M)</a></li>
+              <li><a href="https://arcos-uc3m.github.io">See more projects, software and tools</a></li>
+              <!-- <li><a href="#characteristics">Characteristics</a></li> -->
+              <!-- <li><a href="#design">Architecture</a></li> -->
             </ul>
           </div>
         </div>

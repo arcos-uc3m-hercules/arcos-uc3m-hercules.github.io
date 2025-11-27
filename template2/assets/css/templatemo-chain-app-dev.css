@@ -127,7 +127,8 @@ p {
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
-  color: #afafaf;
+  /* color: #afafaf; */
+  color: #000000
 }
 
 img {
@@ -1154,7 +1155,7 @@ About Us
 }
 
 .about-us:after {
-  background-image: url(../images/about-bg.jpg);
+  background-image: url(../images/about-hercules-hpc.png);
   width: 777px;
   height: 1132px;
   content: '';
