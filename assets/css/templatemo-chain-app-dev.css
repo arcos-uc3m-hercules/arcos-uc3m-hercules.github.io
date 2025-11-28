@@ -1089,6 +1089,14 @@ Services Style
   background-image: url(../images/service-icon-04.png);
 }
 
+.ucx-service .icon {
+  background-image: url(../UCX_Logo_50x50.png);
+}
+
+.ucx-service:hover .icon {
+  background-image: url(../UCX_Logo_50x50.png);
+}
+
 .fourth-service:hover .icon {
   background-image: url(../images/service-icon-hover-04.png);
 }
