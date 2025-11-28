@@ -196,6 +196,11 @@ body {
   height: 2px;
 }
 
+.section-heading.natural-img img {
+    width: auto;
+    height: auto;
+}
+
 .section-heading p {
   margin-top: 10px;
 }
@@ -961,8 +966,14 @@ Services Style
 --------------------------------------------- 
 */
 
+
 .services {
   padding-top: 130px;
+  position: relative;
+}
+
+.services.simpleheader {  
+  padding-top: 0px;
   position: relative;
 }
 
