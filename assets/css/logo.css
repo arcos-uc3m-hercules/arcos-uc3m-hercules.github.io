@@ -21,21 +21,18 @@
 }
 
 /* Estilo para Móviles (pantallas menores a 770px) */
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
     .hercules-logo {
-        /* max-height: 20px */
-        display: none;
-        /* Altura reducida para que no rompa el menú */
-        /* margin-top: 5px; */
-        /* Un pequeño ajuste de alineación si es necesario */
+        max-height: 20px
+        /* display: none; 
     }
-}
+} */
 
 /* Opcional: Ajuste para pantallas muy pequeñas (menores a 350px) */
-@media (max-width: 350px) {
+/* @media (max-width: 350px) {
     .hercules-logo {
         max-height: 35px;
     }
-}
+} */
 /* FIN LOGO */ 
 
