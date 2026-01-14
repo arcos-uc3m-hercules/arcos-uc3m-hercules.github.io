@@ -134,7 +134,7 @@ $(function() {
           $('html, body').stop().animate({
               scrollTop: (target.offset().top) + 1
           }, 500, 'swing', function () {
-              window.location.hash = target;
+              // window.location.hash = target;
               $(document).on("scroll", onScroll);
           });
       });
@@ -144,13 +144,17 @@ $(function() {
       var scrollPos = $(document).scrollTop();
       $('.nav a').each(function () {
           var currLink = $(this);
-          var refElement = $(currLink.attr("href"));
-          if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-              $('.nav ul li a').removeClass("active");
-              currLink.addClass("active");
-          }
-          else{
-              currLink.removeClass("active");
+          var refHref = $(currLink.attr("href"));
+          // FIX: Only proceed if the link starts with '#' and the element actually exists
+          if (refHref.startsWith("#") && $(refHref).length) {
+            var refElement = $(refHref);
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.nav ul li a').removeClass("active");
+                currLink.addClass("active");
+            }
+            else{
+                currLink.removeClass("active");
+            }
           }
       });
   }
