@@ -1498,8 +1498,8 @@ The Clients
 }
 
 .pricing-item-regular span.price {
-  font-size: 40px;
-  color: #fff;
+  font-size: 24px;
+  color: #4b8ef1;
   position: absolute;
   font-weight: 700;
   z-index: 1;

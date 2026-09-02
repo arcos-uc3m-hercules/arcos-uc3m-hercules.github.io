@@ -144,9 +144,9 @@ $(function() {
       var scrollPos = $(document).scrollTop();
       $('.nav a').each(function () {
           var currLink = $(this);
-          var refHref = $(currLink.attr("href"));
+          var refHref = currLink.attr("href");
           // FIX: Only proceed if the link starts with '#' and the element actually exists
-          if (refHref.startsWith("#") && $(refHref).length) {
+          if (refHref && refHref.startsWith("#") && $(refHref).length) {
             var refElement = $(refHref);
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                 $('.nav ul li a').removeClass("active");
