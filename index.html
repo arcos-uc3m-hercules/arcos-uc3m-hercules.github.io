@@ -58,20 +58,20 @@ https://templatemo.com/tm-570-chain-app-dev
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <!-- <img src="assets/hercules.png" alt="Hercules Logo" style="max-height: 60px; width: auto;"> -->
               <img src="assets/hercules.png" alt="Hercules Logo" class="hercules-logo">
-              <!-- <img src="assets/arcos-logo-2025.png" alt="ARCOS group Logo" class="hercules-logo"> -->
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <!-- <li class="scroll-to-section"><a href="#top" class="active">Home</a></li> -->
               <li class="scroll-to-section"><a href="#characteristics">Characteristics</a></li>
               <li class="scroll-to-section"><a href="#design">Design</a></li>
               <!-- <li class="scroll-to-section"><a href="#components">Components</a></li> -->
               <li class="scroll-to-section"><a href="#installation">Installation</a></li>
               <li class="scroll-to-section"><a href="#usage">How to use</a></li>
-              <li class="scroll-to-section"><a href="#todo">FAQs</a></li>
+              <li class="scroll-to-section"><a href="#demo">Demo</a></li>
+              <li class="scroll-to-section"><a href="#publications">Articles</a></li>
+              <!-- <li class="scroll-to-section"><a href="#todo">FAQs</a></li> -->
               <li>
                 <div class="gradient-button"><a href="https://github.com/arcos-uc3m-hercules/hercules"
                     target="_blank"><i class="fab fa-github"></i> Repository </a></div>
@@ -135,7 +135,8 @@ https://templatemo.com/tm-570-chain-app-dev
           <div class="section-heading  natural-img wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
             <!-- <h4> developed by <a href="https://www.uc3m.es/research-groups/arcos">ARCOS group</a></h4> -->
             <h4> developed by <a href="https://www.uc3m.es/research-groups/arcos"></a></h4>
-            <a href="https://arcos-uc3m.github.io" target="_blank"><img src="assets/arcos-logo-2025.png" href="" alt="ARCOS group Logo" class="hercules-logo"></a>
+            <a href="https://arcos-uc3m.github.io" target="_blank"><img src="assets/arcos-logo-2025.png" href=""
+                alt="ARCOS group Logo" class="hercules-logo"></a>
             <!-- <h4>Main <em>Characteristics</em></h4> -->
             <!-- <img src="assets/images/heading-line-dec.png" alt=""> -->
             <!-- <p>Designed to alleviate the strain on traditional HPC storage systems by dynamically utilizing local storage resources.</p> -->
@@ -175,6 +176,11 @@ https://templatemo.com/tm-570-chain-app-dev
             <h4>Elasticity</h4>
             <p>Implements runtime elasticity, allowing storage services to dynamically adjust capacity based on
               application needs.</p>
+            <div style="margin-top: 12px;">
+              <a href="#demo" style="font-size: 13px; font-weight: 500; color: #4b8ef1;">
+                <i class="fas fa-play-circle"></i> Watch Demo
+              </a>
+            </div>
           </div>
         </div>
         <div class="col-lg-3">
@@ -334,7 +340,8 @@ https://templatemo.com/tm-570-chain-app-dev
         <div class="section-heading">
           <h4>Download &amp; <em>Installation</em></h4>
           <img src="assets/images/heading-line-dec.png" alt="">
-          <p>HERCULES is a CMake-based project. You can build it from source or use Spack package manager.</p>
+          <p>HERCULES can be built from source using CMake, installed via the Spack package manager, or containerized
+            using Docker.</p>
         </div>
 
         <div class="row">
@@ -346,7 +353,7 @@ https://templatemo.com/tm-570-chain-app-dev
                 <li>CMake >= 3.5</li>
                 <li>UCX >= 1.15</li>
                 <li>Glib</li>
-                <li>MPI (MPICH or OpenMPI)</li>
+                <!-- <li>MPI (MPICH or OpenMPI)</li> -->
               </ul>
             </div>
           </div>
@@ -381,7 +388,7 @@ https://templatemo.com/tm-570-chain-app-dev
                         <div class="col-lg-12">
                           <div class="client-content">
                             <!-- TODO: add copy-paste button. -->
-                            <h5><i class="fa fa-terminal"></i>Method 1: Standard Installation</h5>
+                            <h5><i class="fa fa-terminal"></i> Method 1: Standard Installation</h5>
                             <p>Clone the repo and run the following commands:</p>
                             <pre
                               style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em;">
@@ -397,13 +404,13 @@ make install</pre>
                     </div>
                   </div>
                 </li>
-                <li>
+                <li style="margin-top: 25px;">
                   <div>
                     <div class="thumb">
                       <div class="row">
                         <div class="col-lg-12">
                           <div class="client-content">
-                            <h5><i class="fa fa-cube">Method 2: Spack Installation</i></h5>
+                            <h5><i class="fa fa-cube"></i> Method 2: Spack Installation</h5>
                             <p>Add the repository under the admire namespace and install:</p>
                             <pre
                               style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em;">
@@ -418,10 +425,29 @@ spack load hercules</pre>
                     </div>
                   </div>
                 </li>
+                <li style="margin-top: 25px;">
+                  <div>
+                    <div class="thumb">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="client-content">
+                            <h5><i class="fab fa-docker"></i> Method 3: Docker Installation</h5>
+                            <p>Clone the repository and build the Docker container image:</p>
+                            <pre
+                              style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em;">
+git clone https://github.com/arcos-uc3m-hercules/hercules.git
+cd hercules
+docker build -t hercules .</pre>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-12">
+          <div class="col-lg-12" style="margin-top: 25px;">
             <p>After compilation, the project generates key binaries like
               <code>libhercules_posix.so</code> (for I/O interception), and <code>hercules_server</code>.
             </p>
@@ -440,12 +466,12 @@ spack load hercules</pre>
             <h4>How to <em>Run &amp; Use</em> HERCULES</h4>
             <img src="assets/images/heading-line-dec.png" alt="">
             <p>Hercules enables access via API library or <code>LD_PRELOAD</code>.</p>
-            <p>We provide scripts to launch deployments easily based from a configuration file <a
+            <p>We provide scripts and Dockerfiles to launch deployments easily based on a configuration file <a
                 href="#configuration">(see below)</a>.</p>
           </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="pricing-item-pro">
             <span class="price">Slurm</span>
             <h4>With Slurm (recommended)</h4>
@@ -461,20 +487,20 @@ spack load hercules</pre>
             <br>
             <ul>
               <li>Intercept calls: <code>export LD_PRELOAD=build/tools/libhercules_posix.so</code></li>
-              <li>Stop deployment: <code>scripts/hercules stop -f <configuration_file_path></code></li>
+              <li>Stop deployment: <code>scripts/hercules stop -f &lt;CONF_PATH&gt;</code></li>
             </ul>
             <div class="border-button">
-              <a href="#">View Scripts</a>
+              <a href="https://github.com/arcos-uc3m-hercules/hercules" target="_blank">View Scripts</a>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="pricing-item-regular">
             <span class="price">Manual</span>
             <h4>Without Slurm</h4>
             <div class="icon">
-              <i class="fa fa-laptop-code" style="font-size: 40px; color: #fff;"></i>
+              <i class="fa fa-laptop-code" style="font-size: 40px; color: #4b8ef1;"></i>
             </div>
             <p>Requires specifying hostfiles for metadata and data servers manually.</p>
             <br>
@@ -487,8 +513,83 @@ spack load hercules</pre>
               <li><strong>data_server_hostfile:</strong> Hostnames of data servers</li>
             </ul>
             <div class="border-button">
-              <a href="#">View Hostfile Example</a>
+              <a href="https://github.com/arcos-uc3m-hercules/hercules" target="_blank">Hostfile Example</a>
             </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="pricing-item-regular">
+            <span class="price">Containerized</span>
+            <h4>With Docker</h4>
+            <div class="icon">
+              <i class="fab fa-docker" style="font-size: 40px; color: #4b8ef1;"></i>
+            </div>
+            <p>Easily test Hercules inside single or multi-container environments.</p>
+            <br>
+            <div style="text-align: left; background: #fff; color:#333; padding: 10px; border-radius: 5px;">
+              <code>docker run -it --rm hercules</code>
+            </div>
+            <br>
+            <ul>
+              <li><strong>Interactive test:</strong> <code>hrun ls -la /mnt/hercules/</code></li>
+              <li><strong>Multi-node Compose:</strong> <code>docker compose up -d</code></li>
+              <li><strong>Client interaction:</strong> <code>docker attach hercules-client</code></li>
+            </ul>
+            <div class="border-button">
+              <a href="#docker-usage">Docker Guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Docker Detailed Instructions -->
+      <div id="docker-usage" class="row" style="margin-top: 60px;">
+        <div class="col-lg-12">
+          <div class="section-heading text-center">
+            <h4>Running with <em>Docker</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Hercules can be easily deployed and tested using Docker containers or Docker Compose.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="box-item"
+            style="background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0px 0px 15px rgba(0,0,0,0.07); height: 100%;">
+            <h5 style="color: #2a2a2a; margin-bottom: 15px;"><i class="fab fa-docker"
+                style="color: #4b8ef1; margin-right: 8px;"></i> Single Container (Interactive)</h5>
+            <p>Run the container interactively. This automatically starts the Hercules services and opens an interactive
+              shell:</p>
+            <pre
+              style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em; margin: 15px 0;">docker run -it --rm hercules</pre>
+            <p>Inside the container, execute commands through Hercules using the <code>hrun</code> shortcut:</p>
+            <pre
+              style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em; margin: 15px 0;">hrun touch /mnt/hercules/file.txt
+hrun ls -la /mnt/hercules/</pre>
+            <p>Alternatively, intercept I/O manually:</p>
+            <pre
+              style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em; margin: 15px 0;">export HERCULES_CONF=/hercules/conf/hercules.conf
+export LD_PRELOAD=/hercules/code/build/tools/libhercules_posix.so
+ls -la /mnt/hercules/</pre>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="box-item"
+            style="background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0px 0px 15px rgba(0,0,0,0.07); height: 100%;">
+            <h5 style="color: #2a2a2a; margin-bottom: 15px;"><i class="fa fa-cubes"
+                style="color: #4b8ef1; margin-right: 8px;"></i> Client-Server with Docker Compose</h5>
+            <p>To deploy a separated server and client environment across isolated services:</p>
+            <pre
+              style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em; margin: 15px 0;">docker compose up -d
+docker attach hercules-client</pre>
+            <p>Inside <code>hercules-client</code>, use <code>hrun &lt;command&gt;</code> to interact with the storage
+              servers:</p>
+            <pre
+              style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em; margin: 15px 0;">hrun ls -la /mnt/hercules/</pre>
+            <p>To stop the deployment and clean up containers:</p>
+            <pre
+              style="background: #232323; color: #fff; padding: 15px; border-radius: 10px; font-size: 0.9em; margin: 15px 0;">docker compose down</pre>
           </div>
         </div>
       </div>
@@ -553,7 +654,8 @@ spack load hercules</pre>
               </tr>
               <tr>
                 <td><code>MALLEABILITY</code></td>
-                <td>Enables malleability functions (1 = On)</td>
+                <td>Enables malleability functions (1 = On) &mdash; <a href="#demo"
+                    style="color: #4b8ef1; text-decoration: underline;">See demo video</a></td>
                 <td>0</td>
               </tr>
             </tbody>
@@ -563,6 +665,213 @@ spack load hercules</pre>
     </div>
   </div>
 
+  <!-- ***** Malleability Demo Section Start ***** -->
+  <div id="demo" class="section" style="padding-top: 80px; padding-bottom: 80px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading text-center">
+            <h4>Malleability <em>Demo</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <!-- <p>Mini demo showcasing how HERCULES dynamically adapts storage resources and redistributes data at runtime in real HPC workloads.</p> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="box-item"
+            style="padding: 30px; border-radius: 25px; box-shadow: 0px 0px 25px rgba(0,0,0,0.08); background: #ffffff;">
+            <div class="row align-items-center">
+              <div class="col-lg-7">
+                <div
+                  style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); background: #000;">
+                  <iframe src="https://www.youtube-nocookie.com/embed/Knl5USfsWP0"
+                    title="HERCULES Malleability Demo - ADMIRE EuroHPC"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+              </div>
+              <div class="col-lg-5 mt-4 mt-lg-0">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                  <i class="fab fa-youtube" style="font-size: 28px; color: #ff0000; margin-right: 12px;"></i>
+                  <h5 style="margin-bottom: 0; color: #2a2a2a; font-weight: 700;">Malleability in Action</h5>
+                </div>
+                <p style="font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 15px;">
+                  Demonstration of HERCULES ad-hoc file system malleability running with the <strong>wacomm++</strong>
+                  simulation under the <strong>European ADMIRE (EuroHPC)</strong> project.
+                </p>
+                <ul style="list-style: none; padding-left: 0; font-size: 13.5px; color: #555; margin-bottom: 20px;">
+                  <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                    <i class="fa fa-check text-primary" style="margin-right: 8px; margin-top: 3px;"></i>
+                    <span><strong>Runtime Elasticity:</strong> Dynamic node scaling and capacity adaptation
+                      on-the-fly.</span>
+                  </li>
+                  <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                    <i class="fa fa-check text-primary" style="margin-right: 8px; margin-top: 3px;"></i>
+                    <span><strong>Data Redistribution:</strong> Seamless migration of in-memory data blocks across
+                      nodes.</span>
+                  </li>
+                  <li style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+                    <i class="fa fa-check text-primary" style="margin-right: 8px; margin-top: 3px;"></i>
+                    <span><strong>Zero Interruption:</strong> Preserves data consistency without stopping
+                      applications.</span>
+                  </li>
+                </ul>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                  <div class="border-button">
+                    <a href="https://doi.org/10.1007/978-3-031-40843-4_5" target="_blank"
+                      style="padding: 10px 18px; font-size: 13px;">
+                      <i class="fas fa-file-alt"></i> ISC '23 Paper
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Malleability Demo Section End ***** -->
+
+  <!-- Publications / Articles section -->
+  <div id="publications" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading text-center">
+            <h4>Scientific <em>Publications</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Last research papers detailing the HERCULES architecture.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+
+          <div class="box-item" style="padding: 30px; margin-bottom: 25px;">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-3 text-center border-right" style="border-right: 1px solid #eee;">
+                <i class="fas fa-scroll" style="font-size: 32px; color: #4b8ef1; margin-bottom: 10px;"></i>
+                <h5 style="color: #4b8ef1; font-weight: 700; margin-bottom: 0;">2026</h5>
+                <span style="font-size: 12px; color: #aaa;">Journal</span>
+              </div>
+
+              <div class="col-lg-7 col-md-9">
+                <h4 style="font-size: 20px; margin-top: 10px; margin-bottom: 10px;">
+                  <a style="color: #2a2a2a;">
+                    HERCULES: A scalable and elastic ad-hoc file system for large-scale computing systems
+                  </a>
+                </h4>
+                <p style="font-size: 14px; margin-bottom: 0;">
+                  <em>Future Generation Computer Systems</em>
+                </p>
+              </div>
+
+              <div class="col-lg-3 col-md-12 text-center mt-3 mt-lg-0">
+                <div class="gradient-button">
+                  <a href="https://doi.org/10.1016/j.future.2025.108350" target="_blank"><i class="fas fa-link"></i>
+                    Read online</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-item" style="padding: 30px; margin-bottom: 25px;">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-3 text-center border-right" style="border-right: 1px solid #eee;">
+                <i class="fas fa-scroll" style="font-size: 32px; color: #4b8ef1; margin-bottom: 10px;"></i>
+                <h5 style="color: #4b8ef1; font-weight: 700; margin-bottom: 0;">2025</h5>
+                <span style="font-size: 12px; color: #aaa;">Journal</span>
+              </div>
+
+              <div class="col-lg-7 col-md-9">
+                <h4 style="font-size: 20px; margin-top: 10px; margin-bottom: 10px;">
+                  <a style="color: #2a2a2a;">
+                    A comparative study of ad-hoc file systems for extreme scale computing
+                  </a>
+                </h4>
+                <p style="font-size: 14px; margin-bottom: 0;">
+                  <em>Future Generation Computer Systems</em>
+                </p>
+              </div>
+
+              <div class="col-lg-3 col-md-12 text-center mt-3 mt-lg-0">
+                <div class="gradient-button">
+                  <a href="https://doi.org/10.1016/j.future.2025.107815" target="_blank"><i class="fas fa-link"></i>
+                    Read Online</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-item" style="padding: 30px; margin-bottom: 25px;">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-3 text-center border-right" style="border-right: 1px solid #eee;">
+                <i class="fas fa-book-open" style="font-size: 32px; color: #4b8ef1; margin-bottom: 10px;"></i>
+                <h5 style="color: #4b8ef1; font-weight: 700; margin-bottom: 0;">2023</h5>
+                <span style="font-size: 12px; color: #aaa;">Conference</span>
+              </div>
+
+              <div class="col-lg-7 col-md-9">
+                <h4 style="font-size: 20px; margin-top: 10px; margin-bottom: 10px;">
+                  <a style="color: #2a2a2a;">
+                    Malleable and Adaptive Ad-Hoc File System for Data Intensive Workloads in HPC Applications
+                  </a>
+                </h4>
+                <p style="font-size: 14px; margin-bottom: 0;">
+                  <em>ISC High Performance 2023</em>
+                </p>
+              </div>
+
+              <div class="col-lg-3 col-md-12 text-center mt-3 mt-lg-0">
+                <div class="gradient-button">
+                  <a href="https://doi.org/10.1007/978-3-031-40843-4_5" target="_blank"><i class="fas fa-link"></i> Read
+                    online</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="box-item" style="padding: 30px; margin-bottom: 25px;">
+            <div class="row align-items-center">
+              <div class="col-lg-2 col-md-3 text-center border-right" style="border-right: 1px solid #eee;">
+                <i class="fas fa-book-open" style="font-size: 32px; color: #4b8ef1; margin-bottom: 10px;"></i>
+                <h5 style="color: #4b8ef1; font-weight: 700; margin-bottom: 0;">2023</h5>
+                <span style="font-size: 12px; color: #aaa;">Conference</span>
+              </div>
+
+              <div class="col-lg-7 col-md-9">
+                <h4 style="font-size: 20px; margin-top: 10px; margin-bottom: 10px;">
+                  <a style="color: #2a2a2a;">
+                    HERCULES: Scalable and Network Portable In-Memory Ad-Hoc File System for Data-Centric and
+                    High-Performance Applications
+                  </a>
+                </h4>
+                <p style="font-size: 14px; margin-bottom: 0;">
+                  <em>Euro-Par 2023: Parallel Processing</em>
+                </p>
+              </div>
+
+              <div class="col-lg-3 col-md-12 text-center mt-3 mt-lg-0">
+                <div class="gradient-button">
+                  <a href="https://doi.org/10.1007/978-3-031-39698-4_46" target="_blank"><i class="fas fa-link"></i>
+                    Read online</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Publications / Articles section -->
+
   <footer id="newsletter">
     <div class="container">
       <div class="row">
@@ -571,7 +880,9 @@ spack load hercules</pre>
             <h4>HERCULES Project</h4>
           </div> -->
           <div class="section-heading">
-            <h4>HERCULES Has Been Developed by ARCOS Group at University Carlos III de Madrid (UC3M)</h4>
+            <h4>HERCULES: An In-Memory Ad-Hoc File System</h4>
+            <h4>Developed by ARCOS Group at
+              <h4>University Carlos III de Madrid (UC3M)</h4>
           </div>
         </div>
       </div>
@@ -582,7 +893,7 @@ spack load hercules</pre>
             <p>University Carlos III de Madrid</p>
             <p>Av. de la Universidad, 30, 28911 Leganés, Madrid, España</p>
             <!-- <p>Pending...</p> -->
-             <!-- TODO: add more information -->
+            <!-- TODO: add more information -->
           </div>
         </div>
         <div class="col-lg-4">
@@ -592,7 +903,8 @@ spack load hercules</pre>
               <!-- <li><a href="#top">Home</a></li> -->
               <li><a target="_blank" href="https://arcos-uc3m.github.io/index.html">About ARCOS Group (UC3M)</a></li>
               <li><a target="_blank" href="https://arcos-uc3m.github.io">See more projects, software and tools</a></li>
-              <li><a target="_blank" href="https://scholar.google.com/citations?user=89aVrHIAAAAJ&hl=es&oi=sra" target="_blank">Read our last articles</a></li>
+              <li><a target="_blank" href="https://scholar.google.com/citations?user=89aVrHIAAAAJ&hl=es&oi=sra"
+                  target="_blank">Read our last articles</a></li>
               <!-- <li><a href="#characteristics">Characteristics</a></li> -->
               <!-- <li><a href="#design">Architecture</a></li> -->
             </ul>
